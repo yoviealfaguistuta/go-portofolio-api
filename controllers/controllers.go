@@ -13,7 +13,7 @@ import (
 func createConnection() *sql.DB {
 	err := godotenv.Load(".env")
 	if err != nil {
-		log.Fatalf("Error loading .env file")
+		// log.Fatalf("Error loading .env file")
 	}
 
 	db, err := sql.Open("postgres", os.Getenv("POSTGRES_URL"))
