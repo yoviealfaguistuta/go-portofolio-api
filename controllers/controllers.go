@@ -38,9 +38,9 @@ func Login(c *fiber.Ctx) error {
 
 	return c.Status(200).JSON(fiber.Map{
 		"data":    "OK",
-		"message": "Berhasil mengambil statistik dashboard",
+		"message": "Success",
 		"code":    200,
-		"_func":   "GetStatistic",
+		"_func":   "Login",
 	})
 
 }
