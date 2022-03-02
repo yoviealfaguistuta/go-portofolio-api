@@ -2,27 +2,23 @@ package main
 
 import (
 	"fmt"
-	router "portfolio-api/router"
-
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
 
 	fmt.Println("Hai")
-	app := fiber.New()
-	app.Use(cors.New())
-	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:3000, http://localhost",
-		AllowHeaders: "Origin, Content-Type, Accept",
-	}))
-	router.SetupMainRoutes(app)
+	// app := fiber.New()
+	// app.Use(cors.New())
+	// app.Use(cors.New(cors.Config{
+	// 	AllowOrigins: "http://localhost:3000, http://localhost",
+	// 	AllowHeaders: "Origin, Content-Type, Accept",
+	// }))
+	// router.SetupMainRoutes(app)
 
-	// err := godotenv.Load(".env")
-	// if err != nil {
-	// 	log.Fatalf("Error loading .env file")
-	// }
+	// // err := godotenv.Load(".env")
+	// // if err != nil {
+	// // 	log.Fatalf("Error loading .env file")
+	// // }
 
-	app.Listen(":3123")
+	// app.Listen(":3123")
 }
