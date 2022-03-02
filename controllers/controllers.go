@@ -2,21 +2,23 @@ package controllers
 
 import (
 	"database/sql"
-	"log"
+	"fmt"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
 func createConnection() *sql.DB {
-	// err := godotenv.Load(".env")
-	// if err != nil {
-	// 	// log.Fatalf("Error loading .env file")
-	// }
-
-	db, err := sql.Open("postgres", "user=postgres password=localhost dbname=portfolio sslmode=disable")
+	err := godotenv.Load(".env")
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error .env cant be load")
+	}
+
+	db, err := sql.Open("postgres", os.Getenv("POSTGRES_URL"))
+	if err != nil {
+		fmt.Println("Error postgress")
 	}
 
 	if err != nil {
