@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	router "portfolio-api/router"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -22,10 +20,10 @@ func main() {
 	}))
 	router.SetupMainRoutes(app)
 
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
+	// err := godotenv.Load(".env")
+	// if err != nil {
+	// 	log.Fatalf("Error loading .env file")
+	// }
 
-	app.Listen(os.Getenv("BASE_URL"))
+	app.Listen(os.Getenv(":3123"))
 }
