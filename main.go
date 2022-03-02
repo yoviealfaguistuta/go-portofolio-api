@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	router "portfolio-api/router"
 
 	"github.com/gofiber/fiber/v2"
@@ -25,5 +24,5 @@ func main() {
 	// 	log.Fatalf("Error loading .env file")
 	// }
 
-	app.Listen(os.Getenv(":3123"))
+	app.Listen(":3123")
 }
