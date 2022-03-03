@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	router "portfolio-api/router"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -20,7 +19,9 @@ func main() {
 		AllowOrigins: "http://localhost:3000, http://localhost",
 		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
-	router.SetupMainRoutes(app)
+	// router.SetupMainRoutes(app)
+
+	app.Get("/", RoutDefault)
 
 	err := godotenv.Load(".env")
 	if err != nil {
@@ -28,4 +29,15 @@ func main() {
 	}
 
 	app.Listen(os.Getenv("BASE_URL"))
+}
+
+func RoutDefault(c *fiber.Ctx) error {
+
+	return c.Status(200).JSON(fiber.Map{
+		"data":    "OK",
+		"message": "Success",
+		"code":    200,
+		"_func":   "Login",
+	})
+
 }
