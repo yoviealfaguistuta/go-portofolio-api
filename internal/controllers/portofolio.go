@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/pgxpool"
 )
 
@@ -25,12 +26,9 @@ func NewPortofolioControllers(conn *pgxpool.Pool, timeout time.Duration) *Portof
 func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.PortofolioList, err error) {
 	var capsule []models.PortofolioList
 	query_list := "SELECT DISTINCT on (portfolio.id) portfolio.id, portfolio.title, portfolio.description, portfolio_images.images FROM portfolio INNER JOIN portfolio_images ON portfolio.id = portfolio_images.id_portfolio order by portfolio.id, portfolio_images.id ASC"
-	rows, err := dc.dbConn.Query(context.Background(), query_list)
+	var rows pgx.Rows
+	rows, err = dc.dbConn.Query(context.Background(), query_list)
 	if err != nil {
-		err = configs.RequestError{
-			Code:    500,
-			Message: err.Error(),
-		}
 		return
 	}
 	defer rows.Close()
@@ -47,6 +45,10 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 			return
 		}
 		capsule = append(capsule, *model)
+	}
+
+	if rows.Err() != nil {
+		return responses, rows.Err()
 	}
 
 	return

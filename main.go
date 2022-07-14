@@ -1,7 +1,10 @@
 package main
 
 import (
+	"context"
+	"database/sql"
 	"fmt"
+	"log"
 	"os"
 	"portfolio-api/configs"
 	_ "portfolio-api/docs" // load API Docs files (Swagger)
@@ -13,14 +16,23 @@ import (
 
 	swagger "github.com/arsmn/fiber-swagger/v2"
 	"github.com/gofiber/fiber/v2"
+	"github.com/golang-migrate/migrate/v4/database"
+	"github.com/golang-migrate/migrate/v4/database/postgres"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"github.com/jackc/pgx/v4/pgxpool"
+	_ "github.com/lib/pq"
 )
 
-var serverName, serverUrl, serverReadTimeout string
+var serverName, serverUrl, serverReadTimeout, dbServerUrl string
+var db *sql.DB
 var err error
 var pgxConn *pgxpool.Pool
+var driver database.Driver
+
+// var migration *migrate.Migrate
 
 func init() {
+	// Server Env
 	serverName = os.Getenv("SERVER_NAME")
 	if serverName == "" {
 		exitf("SERVER_NAME env is required")
@@ -33,8 +45,59 @@ func init() {
 	if serverReadTimeout == "" {
 		exitf("SERVER_READ_TIMEOUT env is required")
 	}
+
+	// JWT Env
+	if os.Getenv("JWT_SECRET_KEY") == "" {
+		exitf("JWT_SECRET_KEY env is required")
+	}
+	if os.Getenv("JWT_EXPIRE_MINUTES") == "" {
+		exitf("JWT_EXPIRE_MINUTES env is required")
+	}
+
+	// Databse Env
+	dbServerUrl = os.Getenv("DB_SERVER_URL")
+	if dbServerUrl == "" {
+		exitf("DB_SERVER_URL config is required")
+	}
 }
+
 func main() {
+	// database migration
+	fmt.Println(dbServerUrl)
+	db, err = sql.Open("postgres", dbServerUrl)
+	if err != nil {
+		exitf("Db open error: %v\n", err)
+	}
+	driver, err = postgres.WithInstance(db, &postgres.Config{})
+	if err != nil {
+		_ = db.Close()
+		exitf("Db postgres driven error: %v\n", err)
+	}
+	// migration, err = migrate.NewWithDatabaseInstance("file://migrations", "postgres", driver)
+	// if err != nil {
+	// 	_ = db.Close()
+	// 	exitf("Unable to initiate migration: %v\n", err)
+	// }
+	/*err = migration.Down() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	if err != nil {
+		log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
+	}*/
+	// err = migration.Up() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	// if err != nil {
+	// 	log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
+	// }
+	err = db.Close()
+	if err != nil {
+		log.Println(fmt.Sprintf("Db close error: %s", err.Error()))
+	}
+	// end database migration
+
+	// Pgx Pool Connection
+	pgxConn, err = pgxpool.Connect(context.Background(), dbServerUrl)
+	if err != nil {
+		exitf("Unable to connect to database: %v\n", err)
+	}
+	defer pgxConn.Close()
 
 	config := configs.FiberConfig()
 	app := fiber.New(config)
@@ -56,28 +119,12 @@ func main() {
 
 	validator := configs.NewValidator()
 
-	rAuth := app.Group("/auth", middL.JWT()) // router for api private access
+	// rAuth := app.Group("/auth", middL.JWT()) // router for api private access
 
 	portofolioController := controllers.NewPortofolioControllers(pgxConn, timeoutContext)
-	handlers.NewPortofolioHandler(rAuth, validator, portofolioController)
+	handlers.NewPortofolioHandler(app, validator, portofolioController)
 
 	configs.StartServer(app)
-
-	// fmt.Println("Golang is Starting")
-	// app := fiber.New()
-	// app.Use(cors.New())
-	// app.Use(cors.New(cors.Config{
-	// 	AllowOrigins: "*",
-	// 	AllowHeaders: "Origin, Content-Type, Accept",
-	// }))
-	// routers.SetupMainRoutes(app)
-
-	// err := godotenv.Load(".env")
-	// if err != nil {
-	// 	log.Fatalf("Error loading .env file, %s", err.Error())
-	// }
-
-	// app.Listen(os.Getenv("BASE_URL"))
 }
 
 func exitf(s string, args ...interface{}) {
