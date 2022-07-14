@@ -1,0 +1,77 @@
+definitions:
+  configs.DataValidationError:
+    properties:
+      field:
+        type: string
+      message:
+        type: string
+    type: object
+  configs.RequestError:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  configs.ServerError:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  models.PortofolioList:
+    properties:
+      description:
+        example: Indeks Pengelolaan Keuangan Daerah
+        type: string
+      id:
+        example: 1
+        type: integer
+      images:
+        example: /assets/*png
+        type: string
+      title:
+        example: IPKD
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /portofolio/index:
+    get:
+      description: Showing list of all portofolio data.
+      operationId: portofolio-list
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            items:
+              $ref: '#/definitions/models.PortofolioList'
+            type: array
+        "400":
+          description: Bad request
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "404":
+          description: Data not found
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "422":
+          description: Data validation failed
+          schema:
+            items:
+              $ref: '#/definitions/configs.DataValidationError'
+            type: array
+        "500":
+          description: Server error
+          schema:
+            $ref: '#/definitions/configs.ServerError'
+      security:
+      - ApiKeyAuth: []
+      summary: Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)
+      tags:
+      - Portofolio
+swagger: "2.0"
