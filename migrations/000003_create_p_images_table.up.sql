@@ -1,4 +1,4 @@
--- Delete tables
+-- Create tables
 CREATE TABLE p_images (
     id              BIGSERIAL  PRIMARY KEY,
     id_portfolio    BIGINT     NOT NULL,

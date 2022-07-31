@@ -1,4 +1,4 @@
--- Delete tables
+-- Create tables
 CREATE TABLE about (
     id          BIGSERIAL       PRIMARY KEY,
     messages    TEXT            NOT NULL,

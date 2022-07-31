@@ -1,4 +1,4 @@
--- Delete tables
+-- Create tables
 CREATE TABLE portofolio (
     id              BIGSERIAL       PRIMARY KEY,
     title           VARCHAR (255)   NOT NULL,
