@@ -1,6 +1,4 @@
-FROM golang:alpine
-
-RUN apk update && apk add --no-cache git
+FROM golang:bullseye
 
 WORKDIR /app
 

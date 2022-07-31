@@ -21,7 +21,7 @@ docker_app: docker_build_image
         		-e SERVER_READ_TIMEOUT="60" \
         		-e JWT_SECRET_KEY="XL67xKPmECeEkMdN" \
         		-e JWT_EXPIRE_MINUTES="240" \
-        		-e DB_SERVER_URL="host=localhost port=5432 user=postgres password=5g6B7UcTBJVDkNvL dbname=portofolio sslmode=disable" \
+        		-e DB_SERVER_URL="host=128.199.92.158 port=5432 user=postgres password= dbname=portofolio sslmode=disable" \
 				api_portofolio:latest
 
 run: docker_app

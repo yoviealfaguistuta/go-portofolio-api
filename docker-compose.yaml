@@ -30,7 +30,7 @@ services:
       SERVER_READ_TIMEOUT: 60
       JWT_SECRET_KEY: XL67xKuuTrBsPmECeEkMdN
       JWT_EXPIRE_MINUTES: 240
-      DB_SERVER_URL: host=database port=5432 user=postgres password=5g6B7UcTBJVDkNvL dbname=kemendagrip3dn sslmode=disable
+      DB_SERVER_URL: host=128.199.92.158 port=5432 user=postgres password= dbname=portofolio sslmode=disable
     ports:
       - '3008:3008'
     networks:
