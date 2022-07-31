@@ -5,7 +5,7 @@ import (
 )
 
 type About struct {
-	Messages string `json:"messages,omitempty" form:"messages" xml:"messages" example:"I am .. years old"`
+	Messages string `json:"about,omitempty" form:"messages" xml:"messages" example:"I am .. years old"`
 }
 
 func (p *About) FromJSON(msg []byte) error {

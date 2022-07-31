@@ -46,5 +46,10 @@ func (ka *AboutHandler) About(c *fiber.Ctx) error {
 		return configs.NewHttpError(c, err)
 	}
 
-	return c.JSON(r)
+	return c.Status(200).JSON(fiber.Map{
+		"body":       r,
+		"message":    "OK",
+		"__typename": "about",
+		"status":     true,
+	})
 }

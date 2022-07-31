@@ -55,7 +55,7 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 	return
 }
 
-func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses []models.PortofolioDetail, err error) {
+func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses models.PortofolioDetail, err error) {
 	var model = new(models.PortofolioDetail)
 	var childs []map[string]interface{}
 	query_list := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
@@ -64,13 +64,13 @@ func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses []model
 		&model.ID,
 		&model.Title,
 		&model.Descriptions,
+		&model.ProjectInfo,
+		&model.Languages,
 		&model.Databases,
 		&model.Dates,
-		&model.Languages,
 		&model.Platform,
-		&model.ProjectInfo,
-		&model.SourceCode,
 		&model.Urls,
+		&model.SourceCode,
 		&model.CreatedAt,
 		&model.UpdatedAt,
 		&childs,
@@ -84,7 +84,7 @@ func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses []model
 		model.Images = append(model.Images, sd)
 	}
 
-	responses = append(responses, *model)
+	responses = *model
 
 	if err != nil {
 		return

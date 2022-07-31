@@ -125,7 +125,7 @@
                 }
             }
         },
-        "/portofolio/index": {
+        "/portofolio/list": {
             "get": {
                 "security": [
                     {
@@ -219,7 +219,7 @@
         "models.About": {
             "type": "object",
             "properties": {
-                "messages": {
+                "about": {
                     "type": "string",
                     "example": "I am .. years old"
                 }

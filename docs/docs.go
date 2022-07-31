@@ -145,7 +145,7 @@ var doc = `{
                 }
             }
         },
-        "/portofolio/index": {
+        "/portofolio/list": {
             "get": {
                 "security": [
                     {
@@ -239,7 +239,7 @@ var doc = `{
         "models.About": {
             "type": "object",
             "properties": {
-                "messages": {
+                "about": {
                     "type": "string",
                     "example": "I am .. years old"
                 }

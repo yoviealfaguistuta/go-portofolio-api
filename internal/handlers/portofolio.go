@@ -21,7 +21,7 @@ func NewPortofolioHandler(rApi fiber.Router, validator *validator.Validate, cont
 	}
 
 	r := rApi.Group("/portofolio")
-	r.Get("/index", handler.List)
+	r.Get("/list", handler.List)
 	r.Get("/detail/:id", handler.Detail)
 }
 
@@ -37,7 +37,7 @@ func NewPortofolioHandler(rApi fiber.Router, validator *validator.Validate, cont
 // @Failure      422  {array}   configs.DataValidationError "Data validation failed"
 // @Failure      500  {object}  configs.ServerError         "Server error"
 // @Security     ApiKeyAuth
-// @Router       /portofolio/index [get]
+// @Router       /portofolio/list [get]
 func (ka *PortofolioHandler) List(c *fiber.Ctx) error {
 	var r interface{}
 	var err error
@@ -48,7 +48,12 @@ func (ka *PortofolioHandler) List(c *fiber.Ctx) error {
 		return configs.NewHttpError(c, err)
 	}
 
-	return c.JSON(r)
+	return c.Status(200).JSON(fiber.Map{
+		"body":       r,
+		"message":    "OK",
+		"__typename": "about",
+		"status":     true,
+	})
 }
 
 // Detail func to get detail of portofolio
@@ -80,5 +85,10 @@ func (ka *PortofolioHandler) Detail(c *fiber.Ctx) error {
 		return configs.NewHttpError(c, err)
 	}
 
-	return c.JSON(r)
+	return c.Status(200).JSON(fiber.Map{
+		"body":       r,
+		"message":    "OK",
+		"__typename": "about",
+		"status":     true,
+	})
 }

@@ -22,7 +22,7 @@ definitions:
     type: object
   models.About:
     properties:
-      messages:
+      about:
         example: I am .. years old
         type: string
     type: object
@@ -172,7 +172,7 @@ paths:
       summary: Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)
       tags:
       - Portofolio
-  /portofolio/index:
+  /portofolio/list:
     get:
       description: Showing list of all portofolio data.
       operationId: portofolio-list
