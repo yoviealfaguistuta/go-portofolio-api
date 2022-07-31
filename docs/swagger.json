@@ -4,6 +4,127 @@
         "contact": {}
     },
     "paths": {
+        "/about": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "Showing list of all portofolio data.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "About"
+                ],
+                "summary": "Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)",
+                "operationId": "about",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.About"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "$ref": "#/definitions/configs.RequestError"
+                        }
+                    },
+                    "404": {
+                        "description": "Data not found",
+                        "schema": {
+                            "$ref": "#/definitions/configs.RequestError"
+                        }
+                    },
+                    "422": {
+                        "description": "Data validation failed",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/configs.DataValidationError"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "schema": {
+                            "$ref": "#/definitions/configs.ServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/portofolio/detail/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "Showing list of all portofolio data.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Portofolio"
+                ],
+                "summary": "Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)",
+                "operationId": "portofolio-detail",
+                "parameters": [
+                    {
+                        "type": "number",
+                        "description": "Id Portofolio",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.PortofolioDetail"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "$ref": "#/definitions/configs.RequestError"
+                        }
+                    },
+                    "404": {
+                        "description": "Data not found",
+                        "schema": {
+                            "$ref": "#/definitions/configs.RequestError"
+                        }
+                    },
+                    "422": {
+                        "description": "Data validation failed",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/configs.DataValidationError"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "schema": {
+                            "$ref": "#/definitions/configs.ServerError"
+                        }
+                    }
+                }
+            }
+        },
         "/portofolio/index": {
             "get": {
                 "security": [
@@ -92,6 +213,85 @@
                 },
                 "message": {
                     "type": "string"
+                }
+            }
+        },
+        "models.About": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string",
+                    "example": "I am .. years old"
+                }
+            }
+        },
+        "models.PortofolioDetail": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "object"
+                },
+                "database": {
+                    "type": "string",
+                    "example": "PostgreSql"
+                },
+                "dates": {
+                    "type": "string",
+                    "example": "1 Januari 2022"
+                },
+                "description": {
+                    "type": "string",
+                    "example": "Indeks Pengelolaan Keuangan Daerah"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.PortofolioImagesModel"
+                    }
+                },
+                "languages": {
+                    "type": "string",
+                    "example": "Javascript"
+                },
+                "platform": {
+                    "type": "string",
+                    "example": "Website"
+                },
+                "project_info": {
+                    "type": "string",
+                    "example": "Sistem ini dibangun pada tahun 2021"
+                },
+                "source_code": {
+                    "type": "string",
+                    "example": "https://github.com/*project"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "IPKD"
+                },
+                "updated_at": {
+                    "type": "object"
+                },
+                "url": {
+                    "type": "string",
+                    "example": "https://ipkd-bpp.kemendagri.go.id"
+                }
+            }
+        },
+        "models.PortofolioImagesModel": {
+            "type": "object",
+            "properties": {
+                "images": {
+                    "type": "string",
+                    "example": "/assets/png"
+                },
+                "orders": {
+                    "type": "integer",
+                    "example": 1
                 }
             }
         },

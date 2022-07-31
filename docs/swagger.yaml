@@ -20,6 +20,62 @@ definitions:
       message:
         type: string
     type: object
+  models.About:
+    properties:
+      message:
+        example: I am .. years old
+        type: string
+    type: object
+  models.PortofolioDetail:
+    properties:
+      created_at:
+        type: object
+      database:
+        example: PostgreSql
+        type: string
+      dates:
+        example: 1 Januari 2022
+        type: string
+      description:
+        example: Indeks Pengelolaan Keuangan Daerah
+        type: string
+      id:
+        example: 1
+        type: integer
+      images:
+        items:
+          $ref: '#/definitions/models.PortofolioImagesModel'
+        type: array
+      languages:
+        example: Javascript
+        type: string
+      platform:
+        example: Website
+        type: string
+      project_info:
+        example: Sistem ini dibangun pada tahun 2021
+        type: string
+      source_code:
+        example: https://github.com/*project
+        type: string
+      title:
+        example: IPKD
+        type: string
+      updated_at:
+        type: object
+      url:
+        example: https://ipkd-bpp.kemendagri.go.id
+        type: string
+    type: object
+  models.PortofolioImagesModel:
+    properties:
+      images:
+        example: /assets/png
+        type: string
+      orders:
+        example: 1
+        type: integer
+    type: object
   models.PortofolioList:
     properties:
       description:
@@ -38,6 +94,84 @@ definitions:
 info:
   contact: {}
 paths:
+  /about:
+    get:
+      description: Showing list of all portofolio data.
+      operationId: about
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            items:
+              $ref: '#/definitions/models.About'
+            type: array
+        "400":
+          description: Bad request
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "404":
+          description: Data not found
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "422":
+          description: Data validation failed
+          schema:
+            items:
+              $ref: '#/definitions/configs.DataValidationError'
+            type: array
+        "500":
+          description: Server error
+          schema:
+            $ref: '#/definitions/configs.ServerError'
+      security:
+      - ApiKeyAuth: []
+      summary: Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)
+      tags:
+      - About
+  /portofolio/detail/{id}:
+    get:
+      description: Showing list of all portofolio data.
+      operationId: portofolio-detail
+      parameters:
+      - description: Id Portofolio
+        in: path
+        name: id
+        required: true
+        type: number
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            items:
+              $ref: '#/definitions/models.PortofolioDetail'
+            type: array
+        "400":
+          description: Bad request
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "404":
+          description: Data not found
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "422":
+          description: Data validation failed
+          schema:
+            items:
+              $ref: '#/definitions/configs.DataValidationError'
+            type: array
+        "500":
+          description: Server error
+          schema:
+            $ref: '#/definitions/configs.ServerError'
+      security:
+      - ApiKeyAuth: []
+      summary: Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)
+      tags:
+      - Portofolio
   /portofolio/index:
     get:
       description: Showing list of all portofolio data.

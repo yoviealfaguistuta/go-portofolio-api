@@ -63,7 +63,6 @@ func init() {
 
 func main() {
 	// database migration
-	fmt.Println(dbServerUrl)
 	db, err = sql.Open("postgres", dbServerUrl)
 	if err != nil {
 		exitf("Db open error: %v\n", err)
@@ -123,6 +122,9 @@ func main() {
 
 	portofolioController := controllers.NewPortofolioControllers(pgxConn, timeoutContext)
 	handlers.NewPortofolioHandler(app, validator, portofolioController)
+
+	aboutController := controllers.NewAboutControllers(pgxConn, timeoutContext)
+	handlers.NewAboutHandler(app, validator, aboutController)
 
 	configs.StartServer(app)
 }
