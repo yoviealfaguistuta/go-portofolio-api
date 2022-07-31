@@ -5,14 +5,12 @@ import (
 )
 
 type Certificate struct {
-	ID          int         `json:"id" form:"id" xml:"id" example:"1"`
-	Images      string      `json:"images" form:"images" xml:"images" example:"assets/images/certificate/*.png"`
-	Title       string      `json:"title" form:"title" xml:"title" example:"Android Developer Roadmap"`
-	Publish     string      `json:"publish" form:"publish" xml:"publish" example:"Agustus 2021"`
-	Credentials string      `json:"credentials" form:"credentials" xml:"credentials" example:"QLZ9144K7P5D"`
-	Urls        string      `json:"urls" form:"urls" xml:"urls" example:"https://www.dicoding.com/certificates/*"`
-	CreatedAt   interface{} `json:"updated_at" form:"updated_at" xml:"updated_at"`
-	UpdatedAt   interface{} `json:"created_at" form:"created_at" xml:"created_at"`
+	ID          int    `json:"id" form:"id" xml:"id" example:"1"`
+	Images      string `json:"images" form:"images" xml:"images" example:"assets/images/certificate/*.png"`
+	Title       string `json:"title" form:"title" xml:"title" example:"Android Developer Roadmap"`
+	Publish     string `json:"publish" form:"publish" xml:"publish" example:"Agustus 2021"`
+	Credentials string `json:"credentials" form:"credentials" xml:"credentials" example:"QLZ9144K7P5D"`
+	Urls        string `json:"urls" form:"urls" xml:"urls" example:"https://www.dicoding.com/certificates/*"`
 }
 
 func (p *Certificate) FromJSON(msg []byte) error {
