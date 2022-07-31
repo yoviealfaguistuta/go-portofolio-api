@@ -8,7 +8,7 @@ export JWT_EXPIRE_MINUTES=240
 
 # Environment Database Connection
 # export DB_SERVER_URL="host=localhost port=5432 user=postgres password=localhost dbname=kemendagrip3dn sslmode=disable"
-export DB_SERVER_URL="host=localhost port=5432 user=postgres password=localhost dbname=portfolio sslmode=disable"
+export DB_SERVER_URL="host=localhost port=5432 user=postgres password=localhost dbname=portofolio_test sslmode=disable"
 
 # Run app
 go mod tidy

@@ -219,7 +219,7 @@
         "models.About": {
             "type": "object",
             "properties": {
-                "message": {
+                "messages": {
                     "type": "string",
                     "example": "I am .. years old"
                 }
@@ -231,7 +231,7 @@
                 "created_at": {
                     "type": "object"
                 },
-                "database": {
+                "databases": {
                     "type": "string",
                     "example": "PostgreSql"
                 },
@@ -239,7 +239,7 @@
                     "type": "string",
                     "example": "1 Januari 2022"
                 },
-                "description": {
+                "descriptions": {
                     "type": "string",
                     "example": "Indeks Pengelolaan Keuangan Daerah"
                 },
@@ -276,7 +276,7 @@
                 "updated_at": {
                     "type": "object"
                 },
-                "url": {
+                "urls": {
                     "type": "string",
                     "example": "https://ipkd-bpp.kemendagri.go.id"
                 }
@@ -298,7 +298,7 @@
         "models.PortofolioList": {
             "type": "object",
             "properties": {
-                "description": {
+                "descriptions": {
                     "type": "string",
                     "example": "Indeks Pengelolaan Keuangan Daerah"
                 },

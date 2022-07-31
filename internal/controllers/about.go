@@ -22,7 +22,7 @@ func NewAboutControllers(conn *pgxpool.Pool, timeout time.Duration) *AboutContro
 
 func (dc *AboutControllers) About(c *fiber.Ctx) (responses string, err error) {
 
-	query_list := "SELECT message FROM portfolio_about WHERE id = 1;"
+	query_list := "SELECT messages FROM about WHERE id = 1;"
 	row := dc.dbConn.QueryRow(context.Background(), query_list)
 	err = row.Scan(&responses)
 

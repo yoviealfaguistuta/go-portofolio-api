@@ -23,7 +23,7 @@ func NewPortofolioControllers(conn *pgxpool.Pool, timeout time.Duration) *Portof
 }
 
 func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.PortofolioList, err error) {
-	query_list := "SELECT DISTINCT on (portfolio.id) portfolio.id, portfolio.title, portfolio.description, portfolio_images.images FROM portfolio INNER JOIN portfolio_images ON portfolio.id = portfolio_images.id_portfolio order by portfolio.id, portfolio_images.id ASC"
+	query_list := "SELECT DISTINCT on (portofolio.id) portofolio.id, portofolio.title, portofolio.descriptions, p_images.images FROM portofolio INNER JOIN p_images ON portofolio.id = p_images.id_portfolio order by portofolio.id, p_images.id ASC"
 	var rows pgx.Rows
 	rows, err = dc.dbConn.Query(context.Background(), query_list)
 
@@ -38,7 +38,7 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 		err = rows.Scan(
 			&model.ID,
 			&model.Title,
-			&model.Description,
+			&model.Descriptions,
 			&model.Images,
 		)
 
@@ -58,19 +58,19 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses []models.PortofolioDetail, err error) {
 	var model = new(models.PortofolioDetail)
 	var childs []map[string]interface{}
-	query_list := "SELECT portfolio.id, portfolio.title, portfolio.description, portfolio.project_info, portfolio.languages, portfolio.database, portfolio.date, portfolio.platform, portfolio.url, portfolio.source_code, portfolio.created_at, portfolio.updated_at, (SELECT json_agg(t) FROM (SELECT portfolio_images.orders, portfolio_images.images FROM portfolio_images WHERE portfolio_images.id_portfolio=portfolio.id) t) AS childs FROM portfolio WHERE id = $1;"
+	query_list := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
 	row := dc.dbConn.QueryRow(context.Background(), query_list, id)
 	err = row.Scan(
 		&model.ID,
 		&model.Title,
-		&model.Description,
-		&model.Database,
+		&model.Descriptions,
+		&model.Databases,
 		&model.Dates,
 		&model.Languages,
 		&model.Platform,
 		&model.ProjectInfo,
 		&model.SourceCode,
-		&model.Url,
+		&model.Urls,
 		&model.CreatedAt,
 		&model.UpdatedAt,
 		&childs,

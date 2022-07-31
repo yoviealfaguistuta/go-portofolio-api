@@ -22,7 +22,7 @@ definitions:
     type: object
   models.About:
     properties:
-      message:
+      messages:
         example: I am .. years old
         type: string
     type: object
@@ -30,13 +30,13 @@ definitions:
     properties:
       created_at:
         type: object
-      database:
+      databases:
         example: PostgreSql
         type: string
       dates:
         example: 1 Januari 2022
         type: string
-      description:
+      descriptions:
         example: Indeks Pengelolaan Keuangan Daerah
         type: string
       id:
@@ -63,7 +63,7 @@ definitions:
         type: string
       updated_at:
         type: object
-      url:
+      urls:
         example: https://ipkd-bpp.kemendagri.go.id
         type: string
     type: object
@@ -78,7 +78,7 @@ definitions:
     type: object
   models.PortofolioList:
     properties:
-      description:
+      descriptions:
         example: Indeks Pengelolaan Keuangan Daerah
         type: string
       id:

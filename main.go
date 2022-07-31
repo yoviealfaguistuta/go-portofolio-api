@@ -16,6 +16,7 @@ import (
 
 	swagger "github.com/arsmn/fiber-swagger/v2"
 	"github.com/gofiber/fiber/v2"
+	"github.com/golang-migrate/migrate/v4"
 	"github.com/golang-migrate/migrate/v4/database"
 	"github.com/golang-migrate/migrate/v4/database/postgres"
 	_ "github.com/golang-migrate/migrate/v4/source/file"
@@ -29,7 +30,7 @@ var err error
 var pgxConn *pgxpool.Pool
 var driver database.Driver
 
-// var migration *migrate.Migrate
+var migration *migrate.Migrate
 
 func init() {
 	// Server Env
@@ -72,19 +73,22 @@ func main() {
 		_ = db.Close()
 		exitf("Db postgres driven error: %v\n", err)
 	}
-	// migration, err = migrate.NewWithDatabaseInstance("file://migrations", "postgres", driver)
-	// if err != nil {
-	// 	_ = db.Close()
-	// 	exitf("Unable to initiate migration: %v\n", err)
-	// }
-	/*err = migration.Down() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	migration, err = migrate.NewWithDatabaseInstance("file://migrations", "postgres", driver)
 	if err != nil {
-		log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
-	}*/
-	// err = migration.Up() // or m.Step(2) if you want to explicitly set the number of migrations to run
+		_ = db.Close()
+		exitf("Unable to initiate migration: %v\n", err)
+	}
+
+	// If you want clear all data rows, uncomment this
+	// err = migration.Down() // or m.Step(2) if you want to explicitly set the number of migrations to run
 	// if err != nil {
 	// 	log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
 	// }
+
+	err = migration.Up() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	if err != nil {
+		log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
+	}
 	err = db.Close()
 	if err != nil {
 		log.Println(fmt.Sprintf("Db close error: %s", err.Error()))
