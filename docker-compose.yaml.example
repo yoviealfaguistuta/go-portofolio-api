@@ -1,0 +1,44 @@
+version: '3'
+services:
+
+# Database Service
+  database:
+    image: postgres
+    container_name: api_portofolio_container
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: 
+      POSTGRES_DB: portofolio
+    volumes:
+      - ./.postgres-data/auth:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+    networks:
+      - portofolio_network
+
+# REST API Service
+  rest_api_server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: portofolio_rest_api_service:1
+    container_name: portofolio_rest_api_service_container
+    restart: unless-stopped
+    environment:
+      SERVER_NAME: Portofolio Rest API Service
+      SERVER_URL: 0.0.0.0:3008
+      SERVER_READ_TIMEOUT: 60
+      JWT_SECRET_KEY: XL67xKuuTrBsPmECeEkMdN
+      JWT_EXPIRE_MINUTES: 240
+      DB_SERVER_URL: host=localhost port=5432 user= password= dbname= sslmode=disable
+    ports:
+      - '3008:3008'
+    networks:
+      - portofolio_network
+    depends_on:
+      - database
+
+# Docker Networks
+networks:
+  p3dn_network:
+    driver: bridge

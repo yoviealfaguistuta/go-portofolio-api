@@ -1,3 +1,4 @@
 .env
 Makefile
 docker-compose.yaml
+run.sh
