@@ -23,9 +23,9 @@ func NewPortofolioControllers(conn *pgxpool.Pool, timeout time.Duration) *Portof
 }
 
 func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.PortofolioList, err error) {
-	query_list := "SELECT DISTINCT on (portofolio.id) portofolio.id, portofolio.title, portofolio.descriptions, p_images.images FROM portofolio INNER JOIN p_images ON portofolio.id = p_images.id_portfolio order by portofolio.id, p_images.id ASC"
+	query := "SELECT DISTINCT on (portofolio.id) portofolio.id, portofolio.title, portofolio.descriptions, p_images.images FROM portofolio INNER JOIN p_images ON portofolio.id = p_images.id_portfolio order by portofolio.id, p_images.id ASC"
 	var rows pgx.Rows
-	rows, err = dc.dbConn.Query(context.Background(), query_list)
+	rows, err = dc.dbConn.Query(context.Background(), query)
 
 	if err != nil {
 		return
@@ -58,8 +58,8 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses models.PortofolioDetail, err error) {
 	var model = new(models.PortofolioDetail)
 	var childs []map[string]interface{}
-	query_list := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
-	row := dc.dbConn.QueryRow(context.Background(), query_list, id)
+	query := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
+	row := dc.dbConn.QueryRow(context.Background(), query, id)
 	err = row.Scan(
 		&model.ID,
 		&model.Title,

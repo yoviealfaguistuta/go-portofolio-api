@@ -130,6 +130,9 @@ func main() {
 	aboutController := controllers.NewAboutControllers(pgxConn, timeoutContext)
 	handlers.NewAboutHandler(app, validator, aboutController)
 
+	certificateController := controllers.NewCertificateControllers(pgxConn, timeoutContext)
+	handlers.NewCertificateHandler(app, validator, certificateController)
+
 	configs.StartServer(app)
 }
 

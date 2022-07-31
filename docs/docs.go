@@ -80,6 +80,62 @@ var doc = `{
                 }
             }
         },
+        "/certificate": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "Showing list of all certificates data.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Certificate"
+                ],
+                "summary": "Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)",
+                "operationId": "certificate",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.Certificate"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "schema": {
+                            "$ref": "#/definitions/configs.RequestError"
+                        }
+                    },
+                    "404": {
+                        "description": "Data not found",
+                        "schema": {
+                            "$ref": "#/definitions/configs.RequestError"
+                        }
+                    },
+                    "422": {
+                        "description": "Data validation failed",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/configs.DataValidationError"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "schema": {
+                            "$ref": "#/definitions/configs.ServerError"
+                        }
+                    }
+                }
+            }
+        },
         "/portofolio/detail/{id}": {
             "get": {
                 "security": [
@@ -242,6 +298,41 @@ var doc = `{
                 "about": {
                     "type": "string",
                     "example": "I am .. years old"
+                }
+            }
+        },
+        "models.Certificate": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "object"
+                },
+                "credentials": {
+                    "type": "string",
+                    "example": "QLZ9144K7P5D"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "images": {
+                    "type": "string",
+                    "example": "assets/images/certificate/*.png"
+                },
+                "publish": {
+                    "type": "string",
+                    "example": "Agustus 2021"
+                },
+                "title": {
+                    "type": "string",
+                    "example": "Android Developer Roadmap"
+                },
+                "updated_at": {
+                    "type": "object"
+                },
+                "urls": {
+                    "type": "string",
+                    "example": "https://www.dicoding.com/certificates/*"
                 }
             }
         },

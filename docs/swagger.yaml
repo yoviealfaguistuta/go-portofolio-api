@@ -26,6 +26,31 @@ definitions:
         example: I am .. years old
         type: string
     type: object
+  models.Certificate:
+    properties:
+      created_at:
+        type: object
+      credentials:
+        example: QLZ9144K7P5D
+        type: string
+      id:
+        example: 1
+        type: integer
+      images:
+        example: assets/images/certificate/*.png
+        type: string
+      publish:
+        example: Agustus 2021
+        type: string
+      title:
+        example: Android Developer Roadmap
+        type: string
+      updated_at:
+        type: object
+      urls:
+        example: https://www.dicoding.com/certificates/*
+        type: string
+    type: object
   models.PortofolioDetail:
     properties:
       created_at:
@@ -130,6 +155,42 @@ paths:
       summary: Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)
       tags:
       - About
+  /certificate:
+    get:
+      description: Showing list of all certificates data.
+      operationId: certificate
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            items:
+              $ref: '#/definitions/models.Certificate'
+            type: array
+        "400":
+          description: Bad request
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "404":
+          description: Data not found
+          schema:
+            $ref: '#/definitions/configs.RequestError'
+        "422":
+          description: Data validation failed
+          schema:
+            items:
+              $ref: '#/definitions/configs.DataValidationError'
+            type: array
+        "500":
+          description: Server error
+          schema:
+            $ref: '#/definitions/configs.ServerError'
+      security:
+      - ApiKeyAuth: []
+      summary: Endpoint for Portoflio Pages (http://yoviealfaguistuta.site)
+      tags:
+      - Certificate
   /portofolio/detail/{id}:
     get:
       description: Showing list of all portofolio data.
