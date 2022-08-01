@@ -11,7 +11,7 @@ CREATE TABLE certificates (
     updated_at      TIMESTAMP       NOT NULL
 );
 
-INSERT INTO certificates (id, images, title, organisasi, publish, credentials, urls, created_at, updated_at) VALUES 
+INSERT INTO certificates (id, images, title, organization, publish, credentials, urls, created_at, updated_at) VALUES 
 (1, '1645690383_Dicoding - Android Developer Roadmap.png', 'Dicoding - Android Developer Roadmap', 'Dicoding', '19 Juli 2020', '-', 'https://dicoding.com/users/yoviealfa80/events', '2021-08-03 18:00:19', '2021-08-03 18:00:19'),
 (2, '1645690412_KOMINFO - Intro to Fullstack Developer.png', 'KOMINFO - Intro to Fullstack Developer', 'KOMINFO', '31 Mei 2021', '-', '-', '2021-08-03 18:00:19', '2021-08-03 18:00:19'),
 (3, '1645690562_Dicoding - AWS Cloud Backend.png', 'Dicoding - Cloud Practitioner Essentials', 'Dicoding', '19 Agustus 2021', 'QLZ9144K7P5D', 'https://dicoding.com/certificates/QLZ9144K7P5D', '2021-08-03 18:00:19', '2021-08-03 18:00:19'),
