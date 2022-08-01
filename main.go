@@ -57,6 +57,7 @@ func init() {
 
 	// Databse Env
 	dbServerUrl = os.Getenv("DB_SERVER_URL")
+	fmt.Println("DB: ", dbServerUrl)
 	if dbServerUrl == "" {
 		exitf("DB_SERVER_URL config is required")
 	}
