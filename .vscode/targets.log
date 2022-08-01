@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 09:05:34 2022
+# Make data base, printed on Mon Aug 01 07:59:40 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\Lenovo\AppData\Local
 # environment
-VSCODE_CWD = C:\localhost3\Golang\portfolio-api
+VSCODE_CWD = C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -43,7 +43,7 @@ GOPATH = C:\localhost\Golang
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2672_FNOZFPVNHIOSNJQK
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_36236_NGNSHWVGIEPXPPCM
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -79,7 +79,7 @@ POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Home Single Language
 # makefile
 CURDIR := c:/localhost3/Golang/portfolio-api
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 2672
+VSCODE_PID = 36236
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -131,7 +131,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\PuTTY\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Program Files (x86)\Nmap;C:\Users\Lenovo\AppData\Roaming\npm;C:\Users\Lenovo\go\bin;
+PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\dotnet\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Program Files (x86)\Nmap;C:\Users\Lenovo\AppData\Roaming\npm;C:\Users\Lenovo\go\bin;
 # environment
 COMPUTERNAME = LENOVOLEGIONY54
 # default
@@ -214,10 +214,6 @@ ALLUSERSPROFILE = C:\ProgramData
 SESSIONNAME = Console
 # environment
 PT7HOME = C:\Program Files\Cisco Packet Tracer 7.2
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -227,7 +223,7 @@ PROCESSOR_REVISION = 9e0d
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 # variable set hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=9/134=7%
+# Load=105/1024=10%, Rehash=0, Collisions=9/132=7%
 
 # Pattern-specific Variable Values
 
@@ -235,9 +231,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Directories
 
-# . (key c:/localhost3/Golang/portfolio-api, mtime 1657770861): 21 files, no impossibilities.
+# . (key c:/localhost3/Golang/portfolio-api, mtime 1659256233): 24 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 24 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -266,13 +262,13 @@ docker_app: docker_build_image
         		-e SERVER_READ_TIMEOUT="60" \
         		-e JWT_SECRET_KEY="XL67xKPmECeEkMdN" \
         		-e JWT_EXPIRE_MINUTES="240" \
-        		-e DB_SERVER_URL="host=localhost port=5432 user=postgres password=5g6B7UcTBJVDkNvL dbname=portofolio sslmode=disable" \
+        		-e DB_SERVER_URL="host=localhost port=5432 user=postgres password=localhost dbname=portofolio_test sslmode=disable" \
 				api_portofolio:latest
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-14 11:37:41
+#  Last modified 2022-07-31 14:40:31
 #  File has been updated.
 #  Successfully updated.
 
@@ -350,12 +346,12 @@ compose-up:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 33 / storage = 296 B / avg = 8 B
-# current buf: size = 8174 B / used = 296 B / count = 33 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 340 B / avg = 9 B
+# current buf: size = 8174 B / used = 340 B / count = 36 / avg = 9 B
 
-# strcache performance: lookups = 55 / hit rate = 40%
+# strcache performance: lookups = 58 / hit rate = 37%
 # hash-table stats:
-# Load=33/8192=0%, Rehash=0, Collisions=0/55=0%
-# Finished Make data base on Sun Jul 31 09:05:34 2022
+# Load=36/8192=0%, Rehash=0, Collisions=0/58=0%
+# Finished Make data base on Mon Aug 01 07:59:40 2022
 
  

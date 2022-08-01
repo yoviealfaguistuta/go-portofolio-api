@@ -23,7 +23,7 @@ func NewCertificateControllers(conn *pgxpool.Pool, timeout time.Duration) *Certi
 }
 
 func (dc *CertificateControllers) List(c *fiber.Ctx) (responses []models.Certificate, err error) {
-	query := "SELECT id, images, title, publish, credentials, urls FROM certificates;"
+	query := "SELECT id, images, title, publish, organization, credentials, urls FROM certificates;"
 	var rows pgx.Rows
 	rows, err = dc.dbConn.Query(context.Background(), query)
 
@@ -40,6 +40,7 @@ func (dc *CertificateControllers) List(c *fiber.Ctx) (responses []models.Certifi
 			&model.Images,
 			&model.Title,
 			&model.Publish,
+			&model.Organization,
 			&model.Credentials,
 			&model.Urls,
 		)
