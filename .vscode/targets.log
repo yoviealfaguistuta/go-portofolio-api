@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 01 07:59:40 2022
+# Make data base, printed on Mon Aug 08 11:53:37 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\Lenovo\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\localhost3\Golang\portfolio-api
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -43,7 +43,7 @@ GOPATH = C:\localhost\Golang
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_36236_NGNSHWVGIEPXPPCM
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_25192_UFTCBYAOHFSWZDUA
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -57,7 +57,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 LANG = C
 # default
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 36236
+VSCODE_PID = 25192
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -199,7 +199,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\Lenovo\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.69.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.70.0-main-sock
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # default
@@ -214,6 +214,10 @@ ALLUSERSPROFILE = C:\ProgramData
 SESSIONNAME = Console
 # environment
 PT7HOME = C:\Program Files\Cisco Packet Tracer 7.2
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -223,7 +227,7 @@ PROCESSOR_REVISION = 9e0d
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=9/132=7%
+# Load=107/1024=10%, Rehash=0, Collisions=9/134=7%
 
 # Pattern-specific Variable Values
 
@@ -268,7 +272,7 @@ docker_app: docker_build_image
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-31 14:40:31
+#  Last modified 2022-08-01 11:47:00
 #  File has been updated.
 #  Successfully updated.
 
@@ -352,6 +356,6 @@ compose-up:
 # strcache performance: lookups = 58 / hit rate = 37%
 # hash-table stats:
 # Load=36/8192=0%, Rehash=0, Collisions=0/58=0%
-# Finished Make data base on Mon Aug 01 07:59:40 2022
+# Finished Make data base on Mon Aug 08 11:53:37 2022
 
  
