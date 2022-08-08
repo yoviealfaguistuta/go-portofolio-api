@@ -23,7 +23,7 @@ func NewPortofolioControllers(conn *pgxpool.Pool, timeout time.Duration) *Portof
 }
 
 func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.PortofolioList, err error) {
-	query := "SELECT DISTINCT on (portofolio.id) portofolio.id, portofolio.title, portofolio.descriptions, p_images.images FROM portofolio INNER JOIN p_images ON portofolio.id = p_images.id_portfolio order by portofolio.id, p_images.id ASC"
+	query := "SELECT DISTINCT on (portofolio.id) portofolio.id, portofolio.title, portofolio.descriptions, portofolio.created_at, p_images.images FROM portofolio INNER JOIN p_images ON portofolio.id = p_images.id_portfolio ORDER BY portofolio.id, p_images.id ASC"
 	var rows pgx.Rows
 	rows, err = dc.dbConn.Query(context.Background(), query)
 
@@ -39,6 +39,7 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 			&model.ID,
 			&model.Title,
 			&model.Descriptions,
+			&model.CreatedAt,
 			&model.Images,
 		)
 

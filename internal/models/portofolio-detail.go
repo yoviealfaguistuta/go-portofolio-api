@@ -17,8 +17,8 @@ type PortofolioDetail struct {
 	Platform     string                  `json:"platform" form:"platform" xml:"platform" example:"Website"`
 	Urls         string                  `json:"urls" form:"urls" xml:"urls" example:"https://ipkd-bpp.kemendagri.go.id"`
 	SourceCode   string                  `json:"source_code" form:"source_code" xml:"source_code" example:"https://github.com/*project"`
-	CreatedAt    interface{}             `json:"updated_at" form:"updated_at" xml:"updated_at"`
-	UpdatedAt    interface{}             `json:"created_at" form:"created_at" xml:"created_at"`
+	CreatedAt    interface{}             `json:"created_at" form:"created_at" xml:"created_at"`
+	UpdatedAt    interface{}             `json:"updated_at" form:"updated_at" xml:"updated_at"`
 	Images       []PortofolioImagesModel `json:"images" form:"images" xml:"images"`
 }
 
