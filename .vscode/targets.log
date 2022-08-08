@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 08 11:53:37 2022
+# Make data base, printed on Mon Aug 08 15:57:07 2022
 
 # Variables
 
@@ -43,7 +43,7 @@ GOPATH = C:\localhost\Golang
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_25192_UFTCBYAOHFSWZDUA
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_32448_LFVZKOCYWHOPFOCN
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 25192
+VSCODE_PID = 32448
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -235,9 +235,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Directories
 
-# . (key c:/localhost3/Golang/portfolio-api, mtime 1659256233): 24 files, no impossibilities.
+# . (key c:/localhost3/Golang/portfolio-api, mtime 1659938739): 26 files, no impossibilities.
 
-# 24 files, no impossibilities in 1 directories.
+# 26 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -350,12 +350,12 @@ compose-up:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 340 B / avg = 9 B
-# current buf: size = 8174 B / used = 340 B / count = 36 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 38 / storage = 358 B / avg = 9 B
+# current buf: size = 8174 B / used = 358 B / count = 38 / avg = 9 B
 
-# strcache performance: lookups = 58 / hit rate = 37%
+# strcache performance: lookups = 60 / hit rate = 36%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=0/58=0%
-# Finished Make data base on Mon Aug 08 11:53:37 2022
+# Load=38/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Mon Aug 08 15:57:07 2022
 
  
