@@ -58,7 +58,7 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses models.PortofolioDetail, err error) {
 	var model = new(models.PortofolioDetail)
 	var childs []map[string]interface{}
-	query := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
+	query := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.tech, portofolio.job_role, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
 	row := dc.dbConn.QueryRow(context.Background(), query, id)
 	err = row.Scan(
 		&model.ID,
@@ -66,6 +66,8 @@ func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses models.
 		&model.Descriptions,
 		&model.ProjectInfo,
 		&model.Languages,
+		&model.Tech,
+		&model.JobRole,
 		&model.Databases,
 		&model.Dates,
 		&model.Platform,

@@ -10,6 +10,8 @@ type PortofolioDetail struct {
 	Descriptions string                  `json:"descriptions" form:"descriptions" xml:"descriptions" example:"Indeks Pengelolaan Keuangan Daerah"`
 	ProjectInfo  string                  `json:"project_info" form:"project_info" xml:"project_info" example:"Sistem ini dibangun pada tahun 2021"`
 	Languages    string                  `json:"languages" form:"languages" xml:"languages" example:"Javascript"`
+	Tech         string                  `json:"tech" form:"tech" xml:"tech" example:"React JS"`
+	JobRole      string                  `json:"job_role" form:"job_role" xml:"job_role" example:"Server Side"`
 	Databases    string                  `json:"databases" form:"databases" xml:"databases" example:"PostgreSql"`
 	Dates        string                  `json:"dates" form:"dates" xml:"dates" example:"1 Januari 2022"`
 	Platform     string                  `json:"platform" form:"platform" xml:"platform" example:"Website"`
