@@ -81,10 +81,10 @@ func main() {
 	}
 
 	// If you want clear all data rows, uncomment this
-	err = migration.Down() // or m.Step(2) if you want to explicitly set the number of migrations to run
-	if err != nil {
-		log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
-	}
+	// err = migration.Down() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	// if err != nil {
+	// 	log.Println(fmt.Sprintf("Migration error: %s", err.Error()))
+	// }
 
 	err = migration.Up() // or m.Step(2) if you want to explicitly set the number of migrations to run
 	if err != nil {
