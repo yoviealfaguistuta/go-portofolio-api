@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 08 15:57:07 2022
+# Make data base, printed on Tue Sep 06 13:44:04 2022
 
 # Variables
 
@@ -43,7 +43,7 @@ GOPATH = C:\localhost\Golang
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_32448_LFVZKOCYWHOPFOCN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_24352_FWGSZRVVLMXJNZAZ
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -57,7 +57,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
+VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
 LANG = C
 # default
@@ -79,7 +79,7 @@ POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Home Single Language
 # makefile
 CURDIR := c:/localhost3/Golang/portfolio-api
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 32448
+VSCODE_PID = 24352
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -131,7 +131,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\dotnet\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Program Files (x86)\Nmap;C:\Users\Lenovo\AppData\Roaming\npm;C:\Users\Lenovo\go\bin;
+PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\dotnet\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Users\Lenovo\AppData\Roaming\npm;C:\Users\Lenovo\go\bin;C:\work\flutter\bin
 # environment
 COMPUTERNAME = LENOVOLEGIONY54
 # default
@@ -142,8 +142,6 @@ MAKEFILES :=
 PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132423696882919712
-# environment
-QT_DEVICE_PIXEL_RATIO = auto
 # environment
 GOROOT = C:\Program Files\Go
 # environment
@@ -199,7 +197,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\Lenovo\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.70.0-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.71.0-main-sock
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # default
@@ -213,8 +211,6 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # environment
-PT7HOME = C:\Program Files\Cisco Packet Tracer 7.2
-# environment
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
@@ -227,7 +223,7 @@ PROCESSOR_REVISION = 9e0d
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 # variable set hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=9/134=7%
+# Load=105/1024=10%, Rehash=0, Collisions=9/132=7%
 
 # Pattern-specific Variable Values
 
@@ -290,7 +286,8 @@ security:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
+#  Fil 
+e has not been updated.
 #  recipe to execute (from 'Makefile', line 6):
 	gosec -quiet ./...
 
@@ -356,6 +353,6 @@ compose-up:
 # strcache performance: lookups = 60 / hit rate = 36%
 # hash-table stats:
 # Load=38/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Mon Aug 08 15:57:07 2022
+# Finished Make data base on Tue Sep 06 13:44:04 2022
 
  
