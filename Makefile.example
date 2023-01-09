@@ -9,26 +9,38 @@ test: security
 	go test -v -timeout 30s -coverprofile=cover.out -cover ./...
 	go tool cover -func=cover.out
 
+BASE_SERVER_NAME="Portfolio API Service"
+BASE_SERVER_URL="0.0.0.0:3100"
+BASE_SERVER_READ_TIMEOUT="60"
+BASE_DB_SERVER_URL="host=localhost port=5432 user=user password=password dbname= sslmode=disable"
+
+go:
+	export BASE_SERVER_NAME=$(BASE_SERVER_NAME); \
+	export BASE_SERVER_URL=$(BASE_SERVER_URL); \
+	export BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT); \
+	export BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL); \
+	go mod tidy;\
+	go run main.go
+
 docker_build_image:
-	docker build -t api_portofolio:latest .
+	docker build -t portfolio_api:latest .
 
 docker_app: docker_build_image
 	docker run -d \
-        		--name api_portofolio_container \
-        		-p 3008:3008 \
-        		-e SERVER_NAME="Portofolio Service API" \
-        		-e SERVER_URL="0.0.0.0:3008" \
-        		-e SERVER_READ_TIMEOUT="60" \
-        		-e JWT_SECRET_KEY="XL67xKPmECeEkMdN" \
-        		-e JWT_EXPIRE_MINUTES="240" \
-        		-e DB_SERVER_URL="host=localhost port=5432 user= password= dbname= sslmode=disable" \
-				api_portofolio:latest
+	            --restart unless-stopped \
+        		--name portfolio_api_container \
+        		--network host \
+        		-e BASE_SERVER_NAME=$(BASE_SERVER_NAME) \
+        		-e BASE_SERVER_URL=$(BASE_SERVER_URL) \
+        		-e BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT) \
+        		-e BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL) \
+        		portfolio_api:latest
 
 run: docker_app
 stop:
-	docker container stop api_portofolio_container
-	docker container rm api_portofolio_container
-	docker rmi api_portofolio:latest
+	docker container stop portfolio_api_container
+	docker container rm portfolio_api_container
+	docker rmi dinkes_sdk:latest
 
 compose-up:
 	docker-compose up -d

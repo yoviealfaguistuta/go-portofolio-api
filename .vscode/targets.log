@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Sep 06 13:44:04 2022
+# Make data base, printed on Mon Jan 09 08:42:32 2023
 
 # Variables
 
@@ -27,7 +27,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\Lenovo\AppData\Local
 # environment
-VSCODE_CWD = C:\localhost3\Golang\portfolio-api
+VSCODE_CWD = C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -43,7 +43,7 @@ GOPATH = C:\localhost\Golang
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_24352_FWGSZRVVLMXJNZAZ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_26908_VNNMJXQQQBETOFIU
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -57,7 +57,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\784b0177c56c607789f9638da7b6bf3230d47a8c
+VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\e8a3071ea4344d9d48ef8a4df2c097372b0c5161
 # environment
 LANG = C
 # default
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 24352
+VSCODE_PID = 26908
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -124,6 +124,8 @@ MAKECMDGOALS := all
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
 COMSPEC = C:\WINDOWS\system32\cmd.exe
+# makefile (from 'Makefile', line 13)
+BASE_SERVER_URL = "0.0.0.0:3100"
 # environment
 WINDIR = C:\WINDOWS
 # environment
@@ -131,7 +133,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\dotnet\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Users\Lenovo\AppData\Roaming\npm;C:\Users\Lenovo\go\bin;C:\work\flutter\bin
+PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Users\Lenovo\AppData\Roaming\npm;C:\work\flutter\bin;C:\Users\Lenovo\go\bin
 # environment
 COMPUTERNAME = LENOVOLEGIONY54
 # default
@@ -184,6 +186,8 @@ APPDATA = C:\Users\Lenovo\AppData\Roaming
 HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = x86
+# makefile (from 'Makefile', line 14)
+BASE_SERVER_READ_TIMEOUT = "60"
 # environment
 GOMODCACHE = C:\localhost\Golang\pkg\mod
 # environment
@@ -192,12 +196,14 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 BUILD_DIR = $(PWD)/app
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# makefile (from 'Makefile', line 12)
+BASE_SERVER_NAME = "Portfolio API Service"
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\Lenovo\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.71.0-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.74.2-main-sock
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # default
@@ -210,20 +216,18 @@ SUFFIXES :=
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 MIC_LD_LIBRARY_PATH = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic
 # environment
 PROCESSOR_REVISION = 9e0d
+# makefile (from 'Makefile', line 15)
+BASE_DB_SERVER_URL = "host=localhost port=5432 user=postgres password=localhost dbname=portfolio sslmode=disable"
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=9/132=7%
+# Load=107/1024=10%, Rehash=0, Collisions=9/134=7%
 
 # Pattern-specific Variable Values
 
@@ -231,7 +235,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Directories
 
-# . (key c:/localhost3/Golang/portfolio-api, mtime 1659938739): 26 files, no impossibilities.
+# . (key c:/localhost3/Golang/portfolio-api, mtime 1673228440): 26 files, no impossibilities.
 
 # 26 files, no impossibilities in 1 directories.
 
@@ -241,34 +245,45 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Files
 
+go:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 19):
+	export BASE_SERVER_NAME=$(BASE_SERVER_NAME); \
+	export BASE_SERVER_URL=$(BASE_SERVER_URL); \
+	export BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT); \
+	export BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL); \
+	go mod tidy;\
+	go run main.go
+
 compose-down:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 36):
+#  recipe to execute (from 'Makefile', line 49):
 	docker-compose down
 
 docker_app: docker_build_image
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 16):
+#  recipe to execute (from 'Makefile', line 30):
 	docker run -d \
-        		--name api_portofolio_container \
-        		-p 3008:3008 \
-        		-e SERVER_NAME="Portofolio Service API" \
-        		-e SERVER_URL="0.0.0.0:3008" \
-        		-e SERVER_READ_TIMEOUT="60" \
-        		-e JWT_SECRET_KEY="XL67xKPmECeEkMdN" \
-        		-e JWT_EXPIRE_MINUTES="240" \
-        		-e DB_SERVER_URL="host=localhost port=5432 user=postgres password=localhost dbname=portofolio_test sslmode=disable" \
-				api_portofolio:latest
+	            --restart unless-stopped \
+        		--name dinkes_sdk_container \
+        		--network host \
+        		-e BASE_SERVER_NAME=$(BASE_SERVER_NAME) \
+        		-e BASE_SERVER_URL=$(BASE_SERVER_URL) \
+        		-e BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT) \
+        		-e BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL) \
+        		dinkes_sdk:latest
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-01 11:47:00
+#  Last modified 2023-01-08 12:17:05
 #  File has been updated.
 #  Successfully updated.
 
@@ -277,17 +292,16 @@ stop:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 29):
-	docker container stop api_portofolio_container
-	docker container rm api_portofolio_container
-	docker rmi api_portofolio:latest
+#  recipe to execute (from 'Makefile', line 42):
+	docker container stop dinkes_sdk_container
+	docker container rm dinkes_sdk_container
+	docker rmi dinkes_sdk:latest
 
 security:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  Fil 
-e has not been updated.
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 6):
 	gosec -quiet ./...
 
@@ -295,8 +309,8 @@ docker_build_image:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 13):
-	docker build -t api_portofolio:latest .
+#  recipe to execute (from 'Makefile', line 27):
+	docker build -t dinkes_sdk:latest .
 
 # Not a target:
 .DEFAULT:
@@ -331,7 +345,7 @@ compose-up:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 34):
+#  recipe to execute (from 'Makefile', line 47):
 	docker-compose up -d
 
 .PHONY: test security run stop compose-up compose-down
@@ -340,19 +354,19 @@ compose-up:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/38=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/39=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 358 B / avg = 9 B
-# current buf: size = 8174 B / used = 358 B / count = 38 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 366 B / avg = 9 B
+# current buf: size = 8174 B / used = 366 B / count = 39 / avg = 9 B
 
-# strcache performance: lookups = 60 / hit rate = 36%
+# strcache performance: lookups = 62 / hit rate = 37%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Tue Sep 06 13:44:04 2022
+# Load=39/8192=0%, Rehash=0, Collisions=0/62=0%
+# Finished Make data base on Mon Jan 09 08:42:32 2023
 
  

@@ -21,14 +21,10 @@ func NewAboutControllers(conn *pgxpool.Pool, timeout time.Duration) *AboutContro
 	}
 }
 
-func (dc *AboutControllers) About(c *fiber.Ctx) (responses models.About, err error) {
+func (ac *AboutControllers) About(c *fiber.Ctx) (responses models.About, err error) {
 
-	var model = new(models.About)
-	query := "SELECT messages FROM about WHERE id = 1;"
-	row := dc.dbConn.QueryRow(context.Background(), query)
-	err = row.Scan(&model.Messages)
-
-	responses = *model
+	SQL := `SELECT messages FROM about WHERE id = 1`
+	err = ac.dbConn.QueryRow(context.Background(), SQL).Scan(&responses.Messages)
 
 	if err != nil {
 		return

@@ -2,11 +2,12 @@ package controllers
 
 import (
 	"context"
+	"math"
+	"portfolio-api/configs"
 	"portfolio-api/internal/models"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/pgxpool"
 )
 
@@ -22,11 +23,26 @@ func NewPortofolioControllers(conn *pgxpool.Pool, timeout time.Duration) *Portof
 	}
 }
 
-func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.PortofolioList, err error) {
-	query := "SELECT DISTINCT on (portofolio.id) portofolio.id, portofolio.title, portofolio.descriptions, portofolio.created_at, p_images.images FROM portofolio INNER JOIN p_images ON portofolio.id = p_images.id_portfolio ORDER BY portofolio.id, p_images.id ASC"
-	var rows pgx.Rows
-	rows, err = dc.dbConn.Query(context.Background(), query)
+func (dc *PortofolioControllers) List(c *fiber.Ctx, page int, limit int) (responses []models.PortofolioList, page_count float64, total int, offset int, err error) {
 
+	offset = limit * (page - 1)
+
+	SQL := `SELECT 
+				COUNT(*) OVER() as total, 
+				p.id,
+				p.title, 
+				p.descriptions, 
+				p.created_at, 
+				pi.images 
+			FROM portofolio AS p
+				LEFT JOIN LATERAL (
+					SELECT 
+						pi.images
+					FROM p_images AS pi
+					WHERE p.id = pi.id_portfolio LIMIT 1) pi ON true 
+			ORDER BY p.id DESC LIMIT $1 OFFSET $2`
+
+	rows, err := dc.dbConn.Query(context.Background(), SQL, limit, offset)
 	if err != nil {
 		return
 	}
@@ -36,6 +52,7 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 	for rows.Next() {
 		var model = new(models.PortofolioList)
 		err = rows.Scan(
+			&total,
 			&model.ID,
 			&model.Title,
 			&model.Descriptions,
@@ -49,45 +66,68 @@ func (dc *PortofolioControllers) List(c *fiber.Ctx) (responses []models.Portofol
 		responses = append(responses, *model)
 	}
 
-	if rows.Err() != nil {
-		return responses, rows.Err()
+	page_count = configs.IntToFloat64(total / limit)
+
+	if page_count < 1 {
+		page_count = 0
+	} else {
+		if total%limit == 0 {
+			page_count = math.Ceil(page_count)
+		} else {
+			page_count = math.Ceil(page_count) + 1
+		}
 	}
 
 	return
 }
 
 func (dc *PortofolioControllers) Detail(c *fiber.Ctx, id int) (responses models.PortofolioDetail, err error) {
-	var model = new(models.PortofolioDetail)
-	var childs []map[string]interface{}
-	query := "SELECT portofolio.id, portofolio.title, portofolio.descriptions, portofolio.project_info, portofolio.languages, portofolio.tech, portofolio.job_role, portofolio.databases, portofolio.dates, portofolio.platform, portofolio.urls, portofolio.source_code, portofolio.created_at, portofolio.updated_at, (SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=portofolio.id) t) AS childs FROM portofolio WHERE id = $1;"
-	row := dc.dbConn.QueryRow(context.Background(), query, id)
-	err = row.Scan(
-		&model.ID,
-		&model.Title,
-		&model.Descriptions,
-		&model.ProjectInfo,
-		&model.Languages,
-		&model.Tech,
-		&model.JobRole,
-		&model.Databases,
-		&model.Dates,
-		&model.Platform,
-		&model.Urls,
-		&model.SourceCode,
-		&model.CreatedAt,
-		&model.UpdatedAt,
-		&childs,
+
+	SQL := `SELECT 
+		p.id, 
+		p.title, 
+		p.descriptions, 
+		p.project_info, 
+		p.languages, 
+		p.tech, 
+		p.job_role, 
+		p.databases, 
+		p.dates, 
+		p.platform, 
+		p.urls, 
+		p.source_code, 
+		p.created_at, 
+		p.updated_at, 
+		(SELECT json_agg(t) FROM (SELECT p_images.orders, p_images.images FROM p_images WHERE p_images.id_portfolio=p.id) t) AS childs 
+	FROM portofolio AS p
+	WHERE p.id = $1`
+
+	var images []map[string]interface{}
+	err = dc.dbConn.QueryRow(context.Background(), SQL, id).Scan(
+		&responses.ID,
+		&responses.Title,
+		&responses.Descriptions,
+		&responses.ProjectInfo,
+		&responses.Languages,
+		&responses.Tech,
+		&responses.JobRole,
+		&responses.Databases,
+		&responses.Dates,
+		&responses.Platform,
+		&responses.Urls,
+		&responses.SourceCode,
+		&responses.CreatedAt,
+		&responses.UpdatedAt,
+		&images,
 	)
 
-	for _, v := range childs {
-		sd := models.PortofolioImagesModel{
+	for _, v := range images {
+		pi := models.PortofolioImages{
 			Orders: int64(v["orders"].(float64)),
 			Images: v["images"].(string),
 		}
-		model.Images = append(model.Images, sd)
+		responses.Images = append(responses.Images, pi)
 	}
-
-	responses = *model
 
 	if err != nil {
 		return
