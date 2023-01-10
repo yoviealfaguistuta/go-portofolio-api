@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jan 09 08:42:32 2023
+# Make data base, printed on Tue Jan 10 08:40:37 2023
 
 # Variables
 
@@ -27,7 +27,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\Lenovo\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\localhost3\Golang\portfolio-api
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -43,7 +43,7 @@ GOPATH = C:\localhost\Golang
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_26908_VNNMJXQQQBETOFIU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_23992_HKWESXLNIJRQAGZH
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 26908
+VSCODE_PID = 23992
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -216,6 +216,10 @@ SUFFIXES :=
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -226,8 +230,9 @@ PROCESSOR_REVISION = 9e0d
 BASE_DB_SERVER_URL = "host=localhost port=5432 user=postgres password=localhost dbname=portfolio sslmode=disable"
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
-# variable set hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=9/134=7%
+# va 
+riable set hash-table stats:
+# Load=109/1024=11%, Rehash=0, Collisions=9/136=7%
 
 # Pattern-specific Variable Values
 
@@ -235,9 +240,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Directories
 
-# . (key c:/localhost3/Golang/portfolio-api, mtime 1673228440): 26 files, no impossibilities.
+# . (key c:/localhost3/Golang/portfolio-api, mtime 1673230870): 22 files, no impossibilities.
 
-# 26 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -272,18 +277,18 @@ docker_app: docker_build_image
 #  recipe to execute (from 'Makefile', line 30):
 	docker run -d \
 	            --restart unless-stopped \
-        		--name dinkes_sdk_container \
+        		--name portfolio_api_container \
         		--network host \
         		-e BASE_SERVER_NAME=$(BASE_SERVER_NAME) \
         		-e BASE_SERVER_URL=$(BASE_SERVER_URL) \
         		-e BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT) \
         		-e BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL) \
-        		dinkes_sdk:latest
+        		portfolio_api:latest
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-01-08 12:17:05
+#  Last modified 2023-01-09 08:44:20
 #  File has been updated.
 #  Successfully updated.
 
@@ -293,9 +298,9 @@ stop:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 42):
-	docker container stop dinkes_sdk_container
-	docker container rm dinkes_sdk_container
-	docker rmi dinkes_sdk:latest
+	docker container stop portfolio_api_container
+	docker container rm portfolio_api_container
+	docker rmi portfolio_api:latest
 
 security:
 #  Phony target (prerequisite of .PHONY).
@@ -310,7 +315,7 @@ docker_build_image:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 27):
-	docker build -t dinkes_sdk:latest .
+	docker build -t portfolio_api:latest .
 
 # Not a target:
 .DEFAULT:
@@ -361,12 +366,12 @@ compose-up:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 366 B / avg = 9 B
-# current buf: size = 8174 B / used = 366 B / count = 39 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 296 B / avg = 8 B
+# current buf: size = 8174 B / used = 296 B / count = 35 / avg = 8 B
 
-# strcache performance: lookups = 62 / hit rate = 37%
+# strcache performance: lookups = 58 / hit rate = 39%
 # hash-table stats:
-# Load=39/8192=0%, Rehash=0, Collisions=0/62=0%
-# Finished Make data base on Mon Jan 09 08:42:32 2023
+# Load=35/8192=0%, Rehash=0, Collisions=0/58=0%
+# Finished Make data base on Tue Jan 10 08:40:37 2023
 
  

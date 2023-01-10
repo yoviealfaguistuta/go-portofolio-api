@@ -3,14 +3,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/yoviealfaguistuta/react-portofolio-frontend">
-    <img src="https://github.com/yoviealfaguistuta/react-portofolio-frontend/blob/production/public/logo.png?raw=true" alt="Logo" width="80" height="80">
+  <a href="https://github.com/yoviealfaguistuta/go-portofolio-api/">
+    <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">My Portfolio (Backend)</h3>
+  <h3 align="center">Portfolio (Service)</h3>
 
   <p align="center">
-    <a href="http://128.199.92.158:3008/swagger/index.html">View Demo</a>
+    <a href="http://api.yoviealfaguistuta.site">View Demo</a>
     ·
     <a href="https://github.com/yoviealfaguistuta/go-portofolio-api/issues">Report Bug</a>
     ·
@@ -22,7 +22,7 @@
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This app is contains following technology:
 
 * ![Go Language](https://img.shields.io/badge/Go_Language-0D1117?style=flat&logo=go)&nbsp;
 * ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-0D1117?style=flat&logo=postgresql)&nbsp;
@@ -53,15 +53,15 @@ If you already have all the prerequisites you can follow this step:
  ```sh
  git clone https://github.com/yoviealfaguistuta/go-portofolio-api.git
  ```
-2. Makefile
+2. Navigate to the root project
+  ```sh
+  cd go-portofolio-api
+  ```
+3. Makefile
   ```sh
   Rename Makefile.example into Makefile
   ```
-  
-3. SH
-  ```sh
-  Rename run.sh.example into run.sh
-  ```
+4. Setup environment variable with your configuration on Makefile
 <!-- USAGE EXAMPLES -->
 ## Running
 
@@ -70,15 +70,9 @@ Using Makefile
   ```sh
   make run
   ```
-Using SH
-  ```sh
-  ./run.sh 
-  ```
  
 <!-- CONTRIBUTING -->
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
