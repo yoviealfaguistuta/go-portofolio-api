@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory 'c:/localhost3/Golang/portfolio-api'
+make: Entering directory `d:/work/portofolio/portfolio-api'
 gosec -quiet ./...
-make: Leaving directory 'c:/localhost3/Golang/portfolio-api'
+make: Leaving directory `d:/work/portofolio/portfolio-api'
  

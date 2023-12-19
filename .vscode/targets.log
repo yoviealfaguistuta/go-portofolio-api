@@ -1,238 +1,214 @@
 make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# GNU Make 4.3
-# Built for Windows32
-# Copyright (C) 1988-2020 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# This program built for i386-pc-mingw32
+ 
 
-# Make data base, printed on Tue Jan 10 08:40:37 2023
+# Make data base, printed on Tue May 30 09:15:03 2023
 
 # Variables
 
-# environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
-# environment
-SYSTEMDRIVE = C:
-# environment
-JAVA_HOME = C:\Program Files\OpenJDK\openjdk-8u262-b10
-# environment
-LC_ALL = C
-# environment
-USERPROFILE = C:\Users\Lenovo
-# environment
-VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
-# environment
-LOCALAPPDATA = C:\Users\Lenovo\AppData\Local
-# environment
-VSCODE_CWD = C:\localhost3\Golang\portfolio-api
-# environment
-CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
-# environment
-SYSTEMROOT = C:\WINDOWS
-# environment
-PROCESSOR_LEVEL = 6
-# environment
-PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\PowerShell\Modules\
-# default
-MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
-# environment
-GOPATH = C:\localhost\Golang
 # automatic
-@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
-# environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_23992_HKWESXLNIJRQAGZH
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# default
-.VARIABLES := 
-# automatic
-%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
-# automatic
-^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
-# automatic
-%F = $(notdir $%)
-# environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\e8a3071ea4344d9d48ef8a4df2c097372b0c5161
-# environment
-LANG = C
-# default
-.LOADED := 
-# environment
-TMP = C:\Users\Lenovo\AppData\Local\Temp
-# default
-.INCLUDE_DIRS = .
-# environment
-PROCESSOR_ARCHITEW6432 = AMD64
-# makefile
-MAKEFLAGS = pqrR
-# environment
-INTEL_DEV_REDIST = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
-# environment
-ONEDRIVE = C:\Users\Lenovo\OneDrive
-# environment
-POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Home Single Language
-# makefile
-CURDIR := c:/localhost3/Golang/portfolio-api
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# automatic
-*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
-# environment
-PROGRAMFILES = C:\Program Files (x86)
-# environment
-MFLAGS = -pqrR
-# default
-.SHELLFLAGS := -c
-# environment
-COMMONPROGRAMW6432 = C:\Program Files\Common Files
-# automatic
-+D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
-# makefile (from 'Makefile', line 1)
-MAKEFILE_LIST := Makefile
-# automatic
-@F = $(notdir $@)
-# environment
-VSCODE_PID = 23992
-# automatic
-?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
-# automatic
-*F = $(notdir $*)
-# automatic
-<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
-# environment
-PHPSTORM = C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;
-# environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# default
-MAKE_HOST := Windows32
-# environment
-ANDROID_HOME = C:\Users\Lenovo\AppData\Local\Android\Sdk
-# environment
-PROGRAMDATA = C:\ProgramData
-# default
-SHELL := sh.exe
-# environment
-HOMEPATH = \Users\Lenovo
-# default
-MAKECMDGOALS := all
-# environment
-DRIVERDATA = C:\Windows\System32\Drivers\DriverData
-# environment
-COMSPEC = C:\WINDOWS\system32\cmd.exe
-# makefile (from 'Makefile', line 13)
-BASE_SERVER_URL = "0.0.0.0:3100"
-# environment
-WINDIR = C:\WINDOWS
-# environment
-MAKELEVEL := 0
-# default
-MAKE = $(MAKE_COMMAND)
-# environment
-PATH = C:\Program Files\Go\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Git\cmd;C:\Golang\bin;C:\Program Files\PowerShell\7\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Golang\bin;C:\localhost3\php;C:\Program Files\JetBrains\PhpStorm 2019.3.1\bin;;C:\Users\Lenovo\AppData\Roaming\npm;C:\work\flutter\bin;C:\Users\Lenovo\go\bin
-# environment
-COMPUTERNAME = LENOVOLEGIONY54
-# default
-MAKEFILES := 
-# automatic
-^F = $(notdir $^)
-# environment
-PROMPT = $P$G
-# environment
-CHOCOLATEYLASTPATHUPDATE = 132423696882919712
-# environment
-GOROOT = C:\Program Files\Go
-# environment
-LOGONSERVER = \\LENOVOLEGIONY54
-# environment
-USERNAME = Lenovo
-# environment
-COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+<D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
 # environment
-PROGRAMW6432 = C:\Program Files
-# environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
-# automatic
-+F = $(notdir $+)
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# environment
-USERDOMAIN = LENOVOLEGIONY54
-# 'override' directive
-GNUMAKEFLAGS := 
-# environment
-OS = Windows_NT
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # makefile
-.DEFAULT_GOAL := security
-# default
-MAKE_VERSION := 4.3
-# environment
-PROGRAMFILES(X86) = C:\Program Files (x86)
-# environment
-USERDOMAIN_ROAMINGPROFILE = LENOVOLEGIONY54
-# environment
-NUMBER_OF_PROCESSORS = 12
-# environment
-PUBLIC = C:\Users\Public
-# environment
-APPDATA = C:\Users\Lenovo\AppData\Roaming
+MAKEFLAGS = Rrqp
+# makefile (from `makefile', line 17)
+BASE_DB_SERVER_URL = "host=ep-shy-hill-330526-pooler.ap-southeast-1.postgres.vercel-storage.com port=5432 user=default password=z0IbMgFPnUq8 dbname=verceldb sslmode=verify-full"
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = 
+ $(patsubst %/,%,$(dir $@))
 # environment
 HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile
+CURDIR := d:/work/portofolio/portfolio-api
+# default
+SHELL := sh.exe
 # environment
-PROCESSOR_ARCHITECTURE = x86
-# makefile (from 'Makefile', line 14)
-BASE_SERVER_READ_TIMEOUT = "60"
+WINDIR = C:\WINDOWS
 # environment
-GOMODCACHE = C:\localhost\Golang\pkg\mod
+VSCODE_NLS_CONFIG = {"locale":"en-us","osLocale":"en-id","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\Lenovo\OneDrive
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (from `makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+TMP = C:\Users\Lenovo\AppData\Local\Temp
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# makefile (from 'Makefile', line 3)
-BUILD_DIR = $(PWD)/app
 # environment
-COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
-# makefile (from 'Makefile', line 12)
-BASE_SERVER_NAME = "Portfolio API Service"
+PROGRAMW6432 = C:\Program Files
 # environment
-ELECTRON_RUN_AS_NODE = 1
+PROGRAMDATA = C:\ProgramData
 # environment
-TEMP = C:\Users\Lenovo\AppData\Local\Temp
-# environment
-VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.74.2-main-sock
+VSCODE_CWD = C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code
 # environment
 GOPROXY = https://proxy.golang.org,direct
-# default
-.RECIPEPREFIX := 
-# automatic
-<F = $(notdir $<)
-# default
-SUFFIXES := 
+# environment
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Language\Go\bin;C:\Language\node-js\;C:\Language\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Language\git\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\go\bin;C:\Users\Lenovo\AppData\Roaming\npm;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin
+# environment
+EFC_27288 = 1
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+CHOCOLATEYLASTPATHUPDATE = 133267245818422298
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# makefile (from `makefile', line 13)
+BASE_SERVER_URL = "0.0.0.0:3100"
+# environment
+USERPROFILE = C:\Users\Lenovo
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
-SESSIONNAME = Console
+GOPATH = C:\Language\Go
 # environment
-VSCODE_CLI = 1
+NUMBER_OF_PROCESSORS = 12
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
+ELECTRON_RUN_AS_NODE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := target-specific order-only second-expansion else-if archives
+# automatic
+%F = $(notdir $%)
 # environment
-MIC_LD_LIBRARY_PATH = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_13192_DNRCJECCZBMGHERP
 # environment
-PROCESSOR_REVISION = 9e0d
-# makefile (from 'Makefile', line 15)
-BASE_DB_SERVER_URL = "host=localhost port=5432 user=postgres password=localhost dbname=portfolio sslmode=disable"
+COMPUTERNAME = LENOVOLEGIONY54
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Lenovo
+# environment
+PUBLIC = C:\Users\Public
+# environment
+GOMODCACHE = C:\Language\Go\pkg\mod
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Lenovo\AppData\Roaming\Code\CachedData\b3e4e68a0bc097f0ae7907b217c1119af9e03435
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\LENOVOLEGIONY54
+# environment
+OPENSSL_CONF = C:\Language\postgresql-15-oldbc\etc\openssl.cnf
+# environment
+ONEDRIVECONSUMER = C:\Users\Lenovo\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = LENOVOLEGIONY54
+# makefile (from `makefile', line 12)
+BASE_SERVER_NAME = "Portfolio API Service"
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from `makefile', line 3)
+BUILD_DIR = $(PWD)/app
+# environment
+VSCODE_CRASH_REPORTER_SANDBOXED_HINT = 1
+# default
+MAKE_VERSION := 3 
+.81
+# makefile
+.DEFAULT_GOAL := security
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LOCALAPPDATA = C:\Users\Lenovo\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/bin/make
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
-# va 
-riable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=9/136=7%
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\0fef3a94d6096a0b1a9a5118139e1cab-1.78.2-main-sock
+# environment
+HOMEPATH = \Users\Lenovo
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+SYSTEMROOT = C:\WINDOWS
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\Lenovo\AppData\Roaming
+# makefile (from `makefile', line 14)
+BASE_SERVER_READ_TIMEOUT = "60"
+# environment
+TEMP = C:\Users\Lenovo\AppData\Local\Temp
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = 9e0d
+# environment
+MAKELEVEL  
+:= 0
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+VSCODE_PID = 13192
+# environment
+USERDOMAIN_ROAMINGPROFILE = LENOVOLEGIONY54
+# variable set hash-table stats:
+# Load=96/1024=9%, Rehash=0, Collisions=10/116=9%
 
 # Pattern-specific Variable Values
 
@@ -240,9 +216,31 @@ riable set hash-table stats:
 
 # Directories
 
-# . (key c:/localhost3/Golang/portfolio-api, mtime 1673230870): 22 files, no impossibilities.
+# : could not be stat'd.
+# C:\Language\xampp\php (key C:/Language/xampp/php, mtime 1682240224): 63 files, no impossibilities.
+# C:\Language\node-js\ (key C:/Language/node-js/, mtime 16 
+82240371): 13 files, no impossibilities.
+# C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1651903407): 29 files, no impossibilities.
+# C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1682288105): 154 files, no impossibilities.
+# . (key d:/work/portofolio/portfolio-api, mtime 1682231175): 22 files, no impossibilities.
+# C:\Language\git\Git\cmd (key C:/Language/git/Git/cmd, mtime 1682250461): 9 files, no impossibilities.
+# C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (key C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1682234449): 10 files, no impossibilities.
+# C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1683862658): 5 files, no impossibilities.
+# C:\ProgramData\chocolatey\bin (key C:/ProgramData/chocolatey/bin, mtime 1682341125): 12 files, no impossibilities.
+# C:\Users\Lenovo\AppData\Roaming\npm (key C:/Users/Lenovo/AppData/Roami 
+ng/npm, mtime 1683854435): 12 files, no impossibilities.
+# C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin: could not be stat'd.
+# C:\Windows\System32\OpenSSH\: could not be stat'd.
+# C:\ProgramData\ComposerSetup\bin (key C:/ProgramData/ComposerSetup/bin, mtime 1682245667): 5 files, no impossibilities.
+# C:\Windows (key C:/Windows, mtime 1684220614): 124 files, no impossibilities.
+# C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps (key C:/Users/Lenovo/AppData/Local/Microsoft/WindowsApps, mtime 168532 
+3334): 38 files, no impossibilities.
+# C:\Users\Lenovo\go\bin (key C:/Users/Lenovo/go/bin, mtime 1682248117): 14 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1685092133): 2848 files, no impossibilities.
+# C:\Language\Go\bin (key C:/Language/Go/bin, mtime 1682251173): 10 files, no impossibilities.
+# C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR (key C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR, mtime 1682234447): 5 files, no impossibilities.
 
-# 22 files, no impossibilities in 1 directories.
+# 3373 files, no impossibilities in 20 directories.
 
 # Implicit Rules
 
@@ -250,72 +248,60 @@ riable set hash-table stats:
 
 # Files
 
+stop:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 42):
+	docker container stop portfolio_api_container
+	docker container rm portfolio_api_container
+	docker rmi portfolio_api:latest
+	
+
+docker_app: docker_build_image
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 30):
+	docker run -d \
+	--restart unless-stopped \
+	--name portfolio_api_container \
+	--network host \
+	-e BASE_SERVER_NAME=$(BASE_SERVER_NAME) \
+	-e BASE_SERVER_URL=$(BASE_SERVER_URL) \
+	-e BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT) \
+	-e BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL) \
+	portfolio_api:latest
+	
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  Fil 
+e has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 go:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 19):
+#  commands to execute (from `makefile', line 19):
 	export BASE_SERVER_NAME=$(BASE_SERVER_NAME); \
 	export BASE_SERVER_URL=$(BASE_SERVER_URL); \
 	export BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT); \
 	export BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL); \
 	go mod tidy;\
 	go run main.go
+	
 
-compose-down:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
-	docker-compose down
-
-docker_app: docker_build_image
+.PHONY: test security run stop compose-up compose-down
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 30):
-	docker run -d \
-	            --restart unless-stopped \
-        		--name portfolio_api_container \
-        		--network host \
-        		-e BASE_SERVER_NAME=$(BASE_SERVER_NAME) \
-        		-e BASE_SERVER_URL=$(BASE_SERVER_URL) \
-        		-e BASE_SERVER_READ_TIMEOUT=$(BASE_SERVER_READ_TIMEOUT) \
-        		-e BASE_DB_SERVER_URL=$(BASE_DB_SERVER_URL) \
-        		portfolio_api:latest
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2023-01-09 08:44:20
-#  File has been updated.
-#  Successfully updated.
-
-stop:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
-	docker container stop portfolio_api_container
-	docker container rm portfolio_api_container
-	docker rmi portfolio_api:latest
-
-security:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
-	gosec -quiet ./...
-
-docker_build_image:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 27):
-	docker build -t portfolio_api:latest .
 
 # Not a target:
 .DEFAULT:
@@ -323,11 +309,57 @@ docker_build_image:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-all:
-#  Command line target.
-#  Implicit rule search has been done.
+compose-up:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 47):
+	docker-com 
+pose up -d
+	
+
+compose-down:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 49):
+	docker-compose down
+	
+
+test: security
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 9):
+	go test -v -timeout 30s -coverprofile=cover.out -cover ./...
+	go tool cover -func=cover.out
+	
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2023-05-29 08:40:05
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+docker_build_image:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 27):
+	docker build -t portfolio_api:latest .
+	
+
+# Not a target:
+.SUFFIXES:
+# 
+  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 run: docker_app
@@ -336,42 +368,31 @@ run: docker_app
 #  File does not exist.
 #  File has not been updated.
 
-test: security
+security:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 9):
-	go test -v -timeout 30s -coverprofile=cover.out -cover ./...
-	go tool cover -func=cover.out
+#  commands to execute (from `makefile', line 6):
+	gosec -quiet ./...
+	
 
-compose-up:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 47):
-	docker-compose up -d
+# files hash-table stats: 
+make: *** No rule to make target `all'.  Stop.
 
-.PHONY: test security run stop compose-up compose-down
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
-# files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/39=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/34=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 296 B / avg = 8 B
-# current buf: size = 8174 B / used = 296 B / count = 35 / avg = 8 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 58 / hit rate = 39%
-# hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=0/58=0%
-# Finished Make data base on Tue Jan 10 08:40:37 2023
+# Finished Make data base on Tue May 30 09:15:03 2023
 
  
